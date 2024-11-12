@@ -1,5 +1,6 @@
 <script setup>
-	const labelBtn="Home"
+	const labelBtn = "Home"	
+
 </script>
 
 <template>

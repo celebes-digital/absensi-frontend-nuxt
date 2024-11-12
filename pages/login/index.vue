@@ -1,8 +1,13 @@
-<script setup lang="ts">
-	const labelBtn="Login";
-	const test = 'a'
+<script setup>
+	definePageMeta({
+		layout: "login",
+	})
+	console.log('test')	
+	
 </script>
 
 <template>
-    <Button :label="labelBtn" />
+	<div>
+		<Button label="login" />
+	</div>
 </template>

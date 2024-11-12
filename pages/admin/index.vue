@@ -1,5 +1,5 @@
 <script setup>
-	const labelBtn="Admin"
+	const labelBtn="User";
 </script>
 
 <template>
