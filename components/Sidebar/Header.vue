@@ -4,11 +4,6 @@
 		img: String,
 		label: String,
 	});
-	const emits = defineEmits(['toggleSidebar']);
-
-	const handleSidebar = () => {
-		emits('toggleSidebar');
-	}
 </script>
 
 <template>
@@ -17,7 +12,5 @@
 			<NuxtImg :src="img" :alt="label" sizes="48px"/>
 			Absensi
 		</NuxtLink>
-
-		<Button icon="pi pi-align-justify" class="hidden" @click="handleSidebar"></Button>
 	</div>
 </template>

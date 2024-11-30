@@ -1,16 +1,11 @@
-<script>
-export default {
-	data() {
-		return {
-			sidebarToggle: false
-		}
-	},
-	methods: {
-		callback() {
-			this.sidebarToggle = !this.sidebarToggle
-		}
-	}
-}
+<script setup>
+	const sidebarToggle = ref(false)
+
+	// Methods
+    const handleToggleSidebar = () => {
+        sidebarToggle.value = !sidebarToggle.value;
+        console.log(sidebarToggle.value)
+    }
 </script>
 
 <template>
@@ -20,14 +15,13 @@ export default {
 
 		<div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
 
-			<!-- Navbar -->
-			<LayoutNavbar @toggleSidebar="callback"></LayoutNavbar>
+			<!-- Header -->
+			<LayoutHeader @toggleSidebar="handleToggleSidebar" :dashboardLink="'/'" img="/celebes-logo.png" alt="Logo"></LayoutHeader>
 
 			<!-- Main Content Area -->
 			<div class="grid grid-cols-12 m-5">
 				<slot></slot>
 			</div>
-
 		</div>
 	</div>
 
