@@ -9,7 +9,11 @@
     const handleSidebar = () => {
 		emits('toggleSidebar');
 	}
-    
+
+    const { data } = await useFetch('https://dummyjson.com/test')
+
+    console.log(data.value)
+
 </script>
 
 <template>
@@ -27,6 +31,5 @@
                 <NuxtImg class="rounded-full" :src="img" :alt="label" sizes="48px"/> 
             </Button>
         </div>
-        <PopupMenu />
     </header>
 </template>
